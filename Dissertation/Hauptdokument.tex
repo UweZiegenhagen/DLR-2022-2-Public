@@ -1,7 +1,7 @@
 %!TEX TS-program = Arara
 % arara: pdflatex: {shell: yes}
 % arara: pdflatex: {shell: yes}
-\documentclass[12pt,ngerman]{scrreprt}
+\documentclass[12pt,ngerman,parskip=half]{scrreprt}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -12,42 +12,26 @@
 \usepackage{paralist}
 \usepackage{xcolor}
 
-\usepackage[]{blindtext}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage{microtype}
 
 \author{Donald Duck}
 \title{Meine Dissertation}
 \date{Entenhausen, den \today}
+
+\includeonly{Kapitel-02,Kapitel-03}
 
 \begin{document}
 \maketitle
 
 \tableofcontents
 
-\chapter{Einführung}
+\include{Kapitel-01}
 
-\blindtext[200]
+\include{Kapitel-02}
 
-\blindtext[200]
-
-\blindtext[200]
-
-
-\chapter{Hauptteil}
-
-\blindtext[200]
-
-\blindtext[200]
-
-\blindtext[200]
-
-
-\chapter{Fazit}
-
-\blindtext[200]
-
-\blindtext[200]
-
-\blindtext[200]
+\include{Kapitel-03}
 
 
 \end{document}
