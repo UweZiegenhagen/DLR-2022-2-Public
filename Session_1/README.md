@@ -16,8 +16,16 @@ Notizen zum ersten Termin
   lautet der Befehl "magick", eventuell nutzt es ghostscript intern für die 
   Umwandlungen
 
+* Für alle Abbildungen, die wie Graphen aussehen oder Graphen sind: Graphviz.
+  Beim Installieren der PATH Variablen hinzufügen, Übersetzen dann aus jedem Verzeichnis
+  mittels: 
+  
+  				dot -Tpdf <Eingabe.dot> > <Ausgabe.pdf>
+  					
+  Andere Ausgabeformate z.B. png oder svg					
+
 * Wenn OpenSource Grafik-Tools (InkScape) nicht reichen => Affinity Designer, gibt es
-  oft zum halben Preis 
+  oft zum halben Preis
   
 * "Ich hatte in der Vergangenheit beim Öffnen der aus LaTeX generierten PDF öfter mal das Problem, dass die PDF nicht auf der ersten Seite, sondern mittendrin geöffnet wird. Außerdem führten die Hyperlinks im PDF-Navigator nicht zu den entsprechenden Kapiteln, sondern teilweise um eine Seite versetzt."
 
