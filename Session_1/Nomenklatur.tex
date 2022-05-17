@@ -1,0 +1,27 @@
+%!TEX TS-program = Arara
+% arara: pdflatex
+% arara: nomencl
+% arara: pdflatex
+\documentclass{scrartcl}
+
+\usepackage{nomencl}
+\makenomenclature
+
+\begin{document}
+
+\section*{Gleichungen}
+
+\begin{equation}
+E=mc^2
+\end{equation}%
+
+\nomenclature{$E$}{Energie}%
+\nomenclature{$m$}{Masse}%
+\nomenclature{$c$}{Lichtgeschwindigkeit}%
+
+Die Gleichung  $a^2+b^2=c^2$ 
+\nomenclature{$a$}{Erste Kathete}\nomenclature{$b$}{Zweite Kathete}\nomenclature{$c$}{Hypothenuse} folgt daraus.
+
+\printnomenclature
+
+\end{document}
