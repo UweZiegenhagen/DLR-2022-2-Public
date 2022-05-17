@@ -1,0 +1,57 @@
+// https://gist.github.com/tobeylin/9baaeb960738d0921f54e369b060ac2f
+digraph FlowChartName {
+	graph [
+		label = "FlowChartName"
+		rankdir = TB;
+		compound = true;
+		splines = ortho;
+	];
+
+	// Start, End
+	node [
+		shape = "box"
+		style = "filled, rounded"
+		fillcolor = 4
+		colorscheme = pastel16
+	] Start, End;
+	// Task
+	node [
+		shape = "box"
+		style = "filled"
+		fillcolor = 2
+		colorscheme = pastel16
+	];
+	// Data Input/Output
+	node [
+		shape = "parallelogram"
+		style = "filled"
+		fillcolor = 3
+		colorscheme = pastel16
+	];
+	// Condition
+	node [
+		shape = "diamond"
+		style = "filled"
+		fillcolor = 6
+		colorscheme = pastel16
+	];
+	// Comment
+	node [
+		shape = "box"
+		style = "dashed"
+	];
+	// Process
+	node [
+		shape = "record"
+		style = "filled"
+		fillcolor = 5
+		colorscheme = pastel16
+	];
+
+	// cluster
+
+	// labels
+
+	// edges
+
+}

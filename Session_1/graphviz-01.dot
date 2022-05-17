@@ -1,0 +1,30 @@
+digraph G {
+  node [];
+  edge [];
+
+  draw [
+    label = "Draw a picture";
+    shape = rect;
+  ];
+  win [
+    label = "You win!";
+    shape = oval;
+  ];
+  guess [
+    label = "Did they\nguess it?";
+    shape = diamond;
+  ];
+  point [
+    label = "Point repeatedly\nto the same picture.";
+    shape = rect;
+  ];
+
+  draw -> guess;
+  guess -> win [ label = "Yes" ];
+  point -> guess;
+  guess -> point [ label = "No" ];
+  {
+    rank=same;
+    guess; point; win;
+  }
+}
