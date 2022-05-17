@@ -3,18 +3,18 @@
 % arara: pdflatex: {shell: yes}
 \documentclass[12pt,ngerman,parskip=half]{scrreprt}
 
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc} braucht man nicht mehr, da Standard
 \usepackage[T1]{fontenc}
-\usepackage{booktabs}
-\usepackage{babel}
-\usepackage{graphicx}
-\usepackage{csquotes}
-\usepackage{paralist}
-\usepackage{xcolor}
-\usepackage{blindtext}
-\usepackage{hyperref}
-\usepackage{microtype}
-\usepackage{subcaption}
+\usepackage{booktabs} % Tolle Tabellen
+\usepackage{babel} % Trennmuster, ``eindeutschen''
+\usepackage{graphicx} % Bilder einbinden
+\usepackage{csquotes} % \enquote{} Befehl für Gänsefüßchen
+\usepackage{paralist} % Kurze Aufzählungen und Listen
+\usepackage{xcolor} % Farben
+\usepackage{blindtext} % Dummy-Text zur Beurteilung des Textsatzes
+\usepackage{hyperref} % Links im Dokument
+\usepackage{microtype} % Mikrotypografie für noch besseren Satz
+\usepackage{subcaption} % Bilder nebeneinander
 
 \setcapindent{2em} % kein Abstand bei mehrzeiligen Captions
 
@@ -22,7 +22,7 @@
 \title{Meine Dissertation}
 \date{Entenhausen, den 17.05.2022}
 
-\includeonly{Kapitel-02,Kapitel-03}
+\includeonly{Kapitel-02,Kapitel-03} % Nur Kapitel 2 und 3 neu kompilieren, aber Seitenzahlen richtig setzen
 
 \begin{document}
 \maketitle
@@ -70,12 +70,14 @@ Abbildung \ref{katzenbilder} auf Seite \pageref{katzenbilder}
 
 
 
-
+% Ausgabe verschiedener Längen
 \the\textwidth
 
 \the\linewidth
 
 \the\columnwidth
+
+% Ausgabe verschiedener Längen, linewidth ist kürzer, da innerhalb einer Aufzählung
 
 \begin{itemize}
 	\item \the\textwidth
@@ -88,7 +90,7 @@ Abbildung \ref{katzenbilder} auf Seite \pageref{katzenbilder}
 
 \blindtext  sdfdf dfgg sdg dfgdfgs sdfdf dfgg sdg dfgdfgs sdfdf dfgg sdg dfgdfgs sdfdf dfgg sdg dfgdfgs sdfdf dfgg sdg dfgdfgs sdfdf dfgg sdg dfgdfgs sdfdf dfgg sdg dfgdfgs sdfdf dfgg sdg dfgdfgs sdfdf dfgg sdg dfgdfgs 
 
-
+%Minipage, um Bild und Unterschrift zusammen zu halten
 \begin{minipage}{\textwidth}
 \begin{center}
 \includegraphics[width=0.9\textwidth,angle=-5]{Bilder/Katze}
