@@ -1,5 +1,5 @@
 %!TEX TS-program = Arara
-% arara: pdflatex: {shell: yes}
+% arara: pdflatex: {synctex: yes}
 \documentclass[ngerman]{beamer}
 
 \usepackage{booktabs}
@@ -14,7 +14,9 @@
 
 % https://tex.stackexchange.com/questions/132783/how-to-write-checkmark-in-latex
 \usepackage{tikz}
-%\renewcommand{\checkmark}{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\newcommand{\tcheckmark}{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\usepackage{blindtext}
 
 \begin{document}
 
@@ -23,15 +25,21 @@
 \begin{enumerate}
 \item 
 Zeilenumbruch bei zweispaltigen Texten (insbesondere bei den Literaturquellen,  hatte hier schon mehrfach Probleme,  dass der Text nicht korrekt in der Formatierung blieb) \aa %\checkmark
-\item Gibt es eine Möglichkeit, Paket-Konflikte zu recherchieren (Welche Pakete sollten nicht zusammen verwendet werden) \aa
-\item Nomenklaturerstellung (dreispaltig mit Abkürzung, Beschreibung, Einheit) \aa
+
+\item Gibt es eine Möglichkeit, Paket-Konflikte zu recherchieren (Welche Pakete sollten nicht zusammen verwendet werden) \aa 
+\tcheckmark
+
+\item Nomenklaturerstellung (dreispaltig mit Abkürzung, Beschreibung, Einheit) \aa \tcheckmark
+
 \item Möglichkeiten, Plots in TeX zu erstellen und -- falls Plots mit einem externen Programm erstellt wurden -- so wäre es interessant zu wissen, ob sich Achsen einfach überschreiben lassen um keinen Bruch in der Schriftart zu bekommen. \bb
+
 \item Bilderplatzierung und Seitenumbrüche (in manchen Fällen werden von TeX übermäßig große Freiräume eingefügt, gibt es einen besseren Weg als die Grafiken im TeX-File zu verschieben) \aa
 
 \item Einbindung und Anwendung der DLR Corporate Design Vorlage (.sty files) in Overleaf-Projekte \cc
+
 \item Anleitung zur Übertragung eines Posters in LaTeX, besonders bzgl. Transparenzen, Formatierung und flexibler Boxränder für Bilder und Text \bb
 
-\item Was ist eine gute Open Source Software, um Abbildungen (wie zum Beispiel in Flussdiagramm in Powerpoint) zu erstellen und diese als eps abzuspeichern? In PP lassen sich die Abbildungen nur als Grafiken speichern und erscheinen dann nicht als Vektor-Grafik. Gibt es ggf. eine direkte LaTeX-Lösung, um ähnlich wie in PP solche Abbildungen zu erstellen? \bb
+\item Was ist eine gute Open Source Software, um Abbildungen (wie zum Beispiel in Flussdiagramm in Powerpoint) zu erstellen und diese als eps abzuspeichern? In PP lassen sich die Abbildungen nur als Grafiken speichern und erscheinen dann nicht als Vektor-Grafik. Gibt es ggf. eine direkte LaTeX-Lösung, um ähnlich wie in PP solche Abbildungen zu erstellen? \bb \checkmark
  
 \item Ein paar Beispiele zur Definition von eigenen Befehlen. Hilfreich wären zunächst einfache Befehle, wie z.B. das Einbinden einer Abbildung (ohne durch die entsprechende Syntax mehrere Zeilen zu füllen). Gerne aber auch komplexere Anwendungsbeispiele, um zu erkennen, was alles möglich ist. \aa
  
@@ -39,15 +47,18 @@ Zeilenumbruch bei zweispaltigen Texten (insbesondere bei den Literaturquellen,  
 Kopplung von Jabref und LaTeX: Wie kann ich in LaTeX den Zitierstil ändern? Ganz konkret die Frage: Kann ich anstelle der üblichen Platzhalter bei Querverweise im Text wie z.B. [1] auch den Bibtexkey aus Jabref verwenden? Ich verwende beispielsweise als Bibtexkey immer den ersten Autornamen + Erscheinungsjahr. \aa
  
 \item 
-Ich hatte in der Vergangenheit beim Öffnen der aus LaTeX generierten PDF öfter mal das Problem, dass die PDF nicht auf der ersten Seite, sondern mittendrin geöffnet wird. Außerdem führten die Hyperlinks im PDF-Navigator nicht zu den entsprechenden Kapiteln, sondern teilweise um eine Seite versetzt. \aa
+Ich hatte in der Vergangenheit beim Öffnen der aus LaTeX generierten PDF öfter mal das Problem, dass die PDF nicht auf der ersten Seite, sondern mittendrin geöffnet wird. Außerdem führten die Hyperlinks im PDF-Navigator nicht zu den entsprechenden Kapiteln, sondern teilweise um eine Seite versetzt. \aa 
  
 \item 
 Ein weiteres Problem ist relativ ähnlich. Ich verwende den Sumatra PDF-Reader in Kombination mit TexnicCenter. In der Vergangenheit ist hier auch schon das Problem aufgetreten, dass ich beim Klicken auf eine bestimmte Zeile in der PDF nicht auf die entsprechende Zeile in der TeX-Datei weitergeleitet werde. Woran liegt das und kann ich das irgendwie einstellen? \aa
  
 \item 
 Wie lässt sich mit LaTeX ein Deckblatt für die Diss erstellen und in das Dokument einbinden? Wie funktioniert das? In diesem Zusammenhang habe ich noch keine Kenntnisse. \aa
+
 \item eigene kleine Klassen erstellen. Ich arbeite schon viel mit benutzerdefinierten \textbackslash newcommand und würde so die Anpassbarkeit noch weiter steigern \bb
+
 \item Für meine \textbackslash newcommands verwende ich auch oft mathematische Abhängigkeiten, um Längen/Positionen zu berechnen. Dabei ermangelt es mir aber oft an Befehlen für einfache Berechnungen wie Input-Parameter zu addieren/multiplizieren/runden. Bisher habe ich meist alles über \textbackslash  pgfmathsetmacro realisiert, wäre aber über Anregungen dankbar. Da waren nämlich einige unsaubere Sachen dabei (konnte keine Double-Zahlen verrechnen und bin dann über \textbackslash  newdimen mit der Einheit pt gegangen, wo ich nicht weiß, ob das so best practice ist). \cc
+
 \item 
 Auch habe ich dabei oft ineinander verschachtelte if-Bedingungen verwendet. Hier würde mich einerseits interessieren, welche if-Statements ich wie abprüfe (Strings, Integer, Double, etc.) und ob es auch sowas wie switch-Statements gibt um nicht zehn IFs ineinander zu verbauen. \bb
 
@@ -71,12 +82,14 @@ Ich habe auch noch kein wirklich gutes Package zur Erstellung von Pie-Charts gef
 \frametitle{Meine Angebote}
 
 \begin{itemize}
-\item Schneller TeXen mit Tastenkürzeln
+\item Schneller TeXen mit Tastenkürzeln \checkmark
 \item \texttt{bibLaTeX} als Ersatz für \texttt{bibtex}
-\item Satzautomatisierung mit \texttt{arara}
+\item Satzautomatisierung mit \texttt{arara} \checkmark
 \item Lebensläufe und Briefe
 \item Einführung in TikZ
 \item Python und LaTeX
+\item Einführung in lualatex
+\item Beamer Präsentationen
 \item \ldots
 \end{itemize}
 \end{frame}
@@ -86,3 +99,5 @@ Ich habe auch noch kein wirklich gutes Package zur Erstellung von Pie-Charts gef
 
 
 https://tex.stackexchange.com/questions/27824/using-package-nomencl
+
+

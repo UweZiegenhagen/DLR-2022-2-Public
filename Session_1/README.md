@@ -16,4 +16,11 @@ Notizen zum ersten Termin
   lautet der Befehl "magick", eventuell nutzt es ghostscript intern für die 
   Umwandlungen
 
-* Wenn OpenSource Grafik-Tools nicht reichen => Affinity Designer
+* Wenn OpenSource Grafik-Tools (InkScape) nicht reichen => Affinity Designer, gibt es
+  oft zum halben Preis 
+  
+* "Ich hatte in der Vergangenheit beim Öffnen der aus LaTeX generierten PDF öfter mal das Problem, dass die PDF nicht auf der ersten Seite, sondern mittendrin geöffnet wird. Außerdem führten die Hyperlinks im PDF-Navigator nicht zu den entsprechenden Kapiteln, sondern teilweise um eine Seite versetzt."
+
+=> Am besten Beispiel "herbeizaubern", eventuell fehlt ein letzter LaTeX-Lauf.    
+  
+* Verbindung zwischen PDF-Viewer und LaTeX-Editor via Synctex => https://tex.stackexchange.com/questions/118489/what-exactly-is-synctex
