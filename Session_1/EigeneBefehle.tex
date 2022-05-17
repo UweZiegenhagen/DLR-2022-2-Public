@@ -1,0 +1,25 @@
+%!TEX TS-program = Arara
+% arara: pdflatex: {shell: yes}
+\documentclass[12pt,ngerman]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{paralist}
+\usepackage{xcolor}
+
+\newcommand{\person}[1]{\textcolor{red}{\textsc{\bfseries #1}}}
+
+\renewcommand{\person}[1]{\textcolor{blue}{\textsc{\bfseries #1}}}
+
+
+\begin{document}
+
+\person{Albert Einstein} war ein bedeutender Physiker,
+
+\person{Niels Bohr} auch.
+
+\end{document}

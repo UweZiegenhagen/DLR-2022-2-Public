@@ -16,3 +16,4 @@ Notizen zum ersten Termin
   lautet der Befehl "magick", eventuell nutzt es ghostscript intern für die 
   Umwandlungen
 
+* Wenn OpenSource Grafik-Tools nicht reichen => Affinity Designer
