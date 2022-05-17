@@ -1,0 +1,38 @@
+%!TEX TS-program = Arara
+% arara: pdflatex
+% arara: nomencl
+% arara: pdflatex
+\documentclass[12pt,ngerman]{scrartcl}
+
+\usepackage{babel}
+\usepackage{siunitx}
+\usepackage[nomentbl,german]{nomencl}
+\makenomenclature
+
+\begin{document}
+
+\section*{Gleichungen}
+
+\begin{equation}
+E=mc^2
+\end{equation}%
+
+% \nomenclature[⟨prefix⟩]{⟨symbol ⟩}{⟨description⟩}{⟨units⟩}{⟨note⟩} 
+\nomenclature{$E$}{Energie in Watt}{\meter/\second\squared}{Notiz}%
+
+\(
+E =  100m % Ganz falsch, denn Einheiten setzt man aufrecht
+\)
+
+\(
+E =  100\si{\meter} % Besser, aber nicht gut, der Abstand zwischen 100 und m fehlt
+\)
+
+
+\(
+E =  \SI{100}{\meter}  % this is the way!
+\)
+
+\printnomenclature
+
+\end{document}
