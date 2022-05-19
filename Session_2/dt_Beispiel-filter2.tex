@@ -28,7 +28,7 @@
 \bfseries PLZ  &
 \bfseries Ort  &
 \bfseries Betrag %
-\DTLforeach{betrag}{%
+\DTLforeach*[\DTLisgt{\betrag}{20}]{betrag}{%
 \name=Name,\vorname=Vorname,\strasse=Strasse,\plz=PLZ,\ort=Ort,\betrag=Betrag}{%
 \\
 \name & \vorname & \strasse & \plz & \ort & \betrag }
