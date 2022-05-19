@@ -1,0 +1,44 @@
+\documentclass[12pt,ngerman,parskip=half]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{paralist}
+\usepackage{xcolor}
+
+\usepackage{listings}
+
+\begin{document}
+
+\begin{lstlisting}[language=Python,morekeywords={read_csv}]
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 19 14:56:38 2022
+
+@author: Uwe
+"""
+
+import pandas as pd
+
+df = pd.read_csv('Beispiel.csv',sep=';')
+print(df)
+
+df = df[df['Betrag']>10]
+print('\n',df)
+
+df.to_latex('ergebnis.tex')
+\end{lstlisting}
+
+Ein Befehl zur Ausgabe von \enquote{Hello World} in Python
+ lautet: \lstinline[language=Python]{print('Hello World');}
+
+\fbox{\lstinputlisting[language=Python,morekeywords={read_csv}]{filta_csvs.py}}
+
+\fbox{\lstinputlisting[language={[LaTeX]TeX},basicstyle=\tiny]{\jobname.tex}}
+
+
+
+\end{document}
