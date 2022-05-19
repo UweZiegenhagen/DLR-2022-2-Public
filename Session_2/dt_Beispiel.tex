@@ -1,0 +1,35 @@
+\documentclass[12pt,ngerman]{scrartcl}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+
+\usepackage{datatool}
+
+\DTLsetseparator{;}
+\DTLloaddb{betrag}{Beispiel.csv}
+
+\begin{document}
+
+\begin{table}
+\caption{Punktübersicht}
+\centering
+\begin{tabular}{llllll}
+\bfseries Name &
+\bfseries Vorname &
+\bfseries Strasse &
+\bfseries PLZ  &
+\bfseries Ort  &
+\bfseries Betrag %
+\DTLforeach{betrag}{%
+\name=Name,\vorname=Vorname,\strasse=Strasse,\plz=PLZ,\ort=Ort,\betrag=Betrag}{%
+\\
+\name & \vorname & \strasse & \plz & \ort & \betrag }
+\end{tabular}
+\end{table}
+
+\DTLforeach{betrag}{%
+\name=Name,\vorname=Vorname,\betrag=Betrag}{%
+
+\vorname \name\ hat \betrag bezahlt.}
+
+\end{document}
