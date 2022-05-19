@@ -3,6 +3,7 @@
 \graphicspath{{./Bilder/},{../Session_1/Bilder}}
 \usepackage{blindtext}
 \usepackage{booktabs}
+\usepackage{lpic}
 
 \title{Quanten und Photonen}
 \subtitle{Eine Einführung}
@@ -128,11 +129,45 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{}
+\frametitle{Booktabs}
 
 \begin{tabular}{|l|c|r|p{4cm}|} \hline
 Spalte 1 & Spalte 2 & Spalte 3 & Spalte 4 \\ \hline
+aaa & bb & ccc & dddd \\ \hline
+wefsdfsfs & sdfsdfsdfsd & sdfsdfsdf & fsdfsdfsdfs\\ \hline
+wefsdfsfs & sdfsdfsdfsd & sdfsdfsdf & fsdfsdfsdfs\\ \hline
+wefsdfsfs & sdfsdfsdfsd & sdfsdfsdf & fsdfsdfsdfs\\ \hline
+wefsdfsfs & sdfsdfsdfsd & sdfsdfsdf & fsdfsdfsdfs\\ \hline
 \end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Booktabs}
+
+\begin{tabular}{lcrp{4cm}} \toprule[1.5pt]
+\textbf{Spalte 1} & \textbf{Spalte 2} & \textbf{Spalte 3} & \textbf{Spalte 4} \\ \midrule
+aaa & bb & ccc & dddd \\ \cmidrule[1pt](lr){1-4}
+wefsdfsfs & sdfsdfsdfsd & sdfsdfsdf & fsdfsdfsdfs\\ 
+wefsdfsfs & sdfsddfsd & sdfsdfsdf & fsdfsdfsdfs\\ \addlinespace[0.5em]
+wefsdfsfs & sdfsdfsdfsd & sddfsdf & fsdfss\\ 
+wefsdfsfs & sdfsdfsdfsd & sdfsdfsdf & fsdfsdfsdfs\\ \bottomrule[1.5pt]
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Bilder}
+\begin{center}
+\begin{lpic}[]{Katze(0.15)} % grid, coords(20)
+\lbl[t]{200,500;\textcolor{yellow}{\small \textbf{Ohr 1}}}
+\lbl[t]{115,150;\textcolor{green}{\small \textbf{Atmega 16U2}}}
+\lbl[t]{54,38;\textcolor{green}{\textbf{7--12V}}}
+\lbl[t]{195,66;\textcolor{green}{\textbf{ATMega 328}}}
+\lbl[t]{200,20;\textcolor{green}{\textbf{IO-Ports}}}
+\lbl[t]{200,195;\textcolor{green}{\textbf{IO-Ports}}}
+\end{lpic}
+\end{center}
 
 \end{frame}
 
