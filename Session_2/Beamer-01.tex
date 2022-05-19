@@ -1,9 +1,23 @@
 \documentclass{beamer}
 
+%\usetheme{PaloAlto}
+\usetheme{AnnArbor}
+
 \graphicspath{{./Bilder/},{../Session_1/Bilder}}
 \usepackage{blindtext}
 \usepackage{booktabs}
 \usepackage{lpic}
+
+\usepackage{etoolbox}
+
+%https://tex.stackexchange.com/questions/170268/separation-space-between-tableofcontents-items-in-beamer
+\makeatletter
+\patchcmd{\beamer@sectionintoc}
+  {\vfill}
+  {\vskip\itemsep}
+  {}
+  {}
+\makeatother  
 
 \title{Quanten und Photonen}
 \subtitle{Eine Einführung}
@@ -16,6 +30,16 @@
 \begin{frame}
 \maketitle
 \end{frame}
+
+\begin{frame}
+\frametitle{Inhalt}
+
+\tableofcontents
+
+
+\end{frame}
+
+\section{Einführung}
 
 \begin{frame}[allowframebreaks]
 \frametitle{Hallo DLR}
@@ -51,6 +75,8 @@
 \end{enumerate}
 \end{frame}
 
+\section{Bilder}
+
 \begin{frame}
 \frametitle{Bilder}
 
@@ -116,6 +142,8 @@
 \end{column}
 \end{columns}
 \end{frame}
+
+\subsection{Fazit}
 
 \begin{frame}
 \frametitle{Mathe}
@@ -127,6 +155,8 @@
 \scalebox{5}{\rotatebox{45}{Hallo DLR}}
 
 \end{frame}
+
+\section{Booktabs}
 
 \begin{frame}
 \frametitle{Booktabs}
@@ -171,5 +201,49 @@ wefsdfsfs & sdfsdfsdfsd & sdfsdfsdf & fsdfsdfsdfs\\ \bottomrule[1.5pt]
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Aufdecken von }
+
+\begin{itemize}
+\item<1-2> ABD
+\item<-3> fdsgfd
+\item<1-> dfgfdgfd
+\item<2,4> gdfgfdg
+\item dfgfdgfd
+\item dfgdfgdf
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+
+\begin{theorem}
+There is no largest prime number.
+\end{theorem}
+
+\begin{proof}
+There is no largest prime number.
+\end{proof}
+
+\begin{alert}{Wichtig}
+There is no largest prime number.
+\end{alert}
+
+\begin{alertblock}{Wrong Theorem}
+$1=2$.
+\end{alertblock}
+
+\end{frame}
+
+
+
 
 \end{document}
+
+
+\begin{frame}
+\onslide<1>
+\includegraphics[width=\textwidth]{Katze}
+\onslide<2>
+\includegraphics[width=\textwidth]{Katze1}
+\end{frame}
