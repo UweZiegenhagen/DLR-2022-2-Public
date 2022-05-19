@@ -1,0 +1,31 @@
+\documentclass[12pt,ngerman,parskip=half,%
+fromalign=center,fromrule=aftername]{scrlttr2}
+\usepackage{palatino}
+\usepackage{babel,blindtext}
+\usepackage{microtype}
+
+%\newkomavar{fromplace}
+\setkomavar{place}{Entenhausen}
+\setkomavar{fromname}{Donald Duck}
+\setkomavar{fromaddress}{Entenweg 1, 12345 Entenhausen}
+\setkomavar{yourref}{dd/2022/05/18-1}
+\setkomavar{yourmail}{12.05.2022}
+\setkomavar{myref}[Steuernummer]{123/456/7890}
+\setkomavar{subject}{Widerspruch Steuerbescheid}
+\setkomavar{date}{\usekomavar{place}, den 18.05.2022}
+
+\begin{document}
+\begin{letter}{Finanzamt Entenhausen \\ Widerspruchsstelle \\ Entenweg 2 \\ 12345 Entenhausen}
+
+\opening{Sehr geehrte Damen und Herren,}
+
+\blindtext
+
+\blindtext
+
+\blindtext
+
+\encl{Steuerbescheid Vorjahr \\ Steuerbescheid Frühjahr}
+\closing{Mit freundlichen Grüßen,}
+\end{letter}
+\end{document}
