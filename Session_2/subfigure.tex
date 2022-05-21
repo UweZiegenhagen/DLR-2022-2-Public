@@ -1,0 +1,92 @@
+\documentclass{scrartcl}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\begin{document}
+\begin{figure}
+	\centering
+	\hfil
+	\begin{subfigure}[t]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{example-image-a}
+		\caption{Kurze Bildunterschrift}
+	\end{subfigure}
+	\hfil
+	\begin{subfigure}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[width=0.73\textwidth]{example-image-b}
+		\caption{Hier steht eine ganz lange und ausführliche Bildunterschrift}
+	\end{subfigure}
+	\hfil
+	\caption{Hauptbildunterschrift}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\hfil
+	\begin{subfigure}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{example-image-a}
+		\caption{Hier steht eine ganz lange und ausführliche Bildunterschrift}
+	\end{subfigure}
+	\hfil
+	\begin{subfigure}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[width=0.75\textwidth]{example-image-b}
+		\caption{Kurze Bildunterschrift}
+	\end{subfigure}
+	\hfil
+	\caption{Hauptbildunterschrift}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+	\centering
+	\begin{minipage}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{example-image-a}
+		\caption{Kurz}
+	\end{minipage}%
+	\hfil
+	\begin{minipage}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[width=0.75\textwidth]{example-image-b}
+		\caption{Hier steht eine ganz lange und ausführliche Bildunterschrift}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{minipage}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[width=0.75\textwidth]{example-image-a}
+		\caption{Kurz}
+	\end{minipage}%
+	\hfil
+	\begin{minipage}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{example-image-b}
+		\caption{Hier steht eine ganz lange und ausführliche Bildunterschrift}
+	\end{minipage}
+\end{figure}
+
+
+
+
+\begin{figure}
+	\centering
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{example-image-a}
+		\caption{Kurz}
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.73\textwidth]{example-image-b}
+		\caption{\blindtext}
+	\end{minipage}
+\end{figure}
+
+\end{document}
