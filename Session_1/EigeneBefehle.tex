@@ -10,10 +10,23 @@
 \usepackage{csquotes}
 \usepackage{paralist}
 \usepackage{xcolor}
+\usepackage{xspace}
+
+\graphicspath{{./bilder/}}
 
 \newcommand{\person}[1]{\textcolor{red}{\textsc{\bfseries #1}}}
 
 \renewcommand{\person}[1]{\textcolor{blue}{\textsc{\bfseries #1}}}
+
+\newcommand{\bild}{\textcolor{lime}{\rule{8cm}{6cm}}}
+
+\newcommand{\image}[2]{%
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{#1}
+\caption{#2}\label{fig:#1}
+\end{figure}
+}
 
 
 \begin{document}
@@ -21,5 +34,17 @@
 \person{Albert Einstein} war ein bedeutender Physiker,
 
 \person{Niels Bohr} auch.
+
+\begin{figure}
+\centering
+\bild
+\caption{Ein einfaches Bild}
+\end{figure}
+
+
+\image{Katze}{Melli}
+
+\pageref{fig:Katze}
+
 
 \end{document}
