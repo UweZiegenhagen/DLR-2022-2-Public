@@ -28,6 +28,15 @@
 \end{figure}
 }
 
+\newcommand{\imagew}[3][1.0]{%
+\begin{figure}
+\centering
+\includegraphics[width=#1\textwidth]{#2}
+\caption{#3}\label{fig:#2}
+\end{figure}
+}
+
+
 
 \begin{document}
 
@@ -46,5 +55,7 @@
 
 \pageref{fig:Katze}
 
+
+\imagew[0.5]{Katze}{Melli}
 
 \end{document}
