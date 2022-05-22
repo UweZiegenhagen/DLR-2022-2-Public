@@ -1,0 +1,253 @@
+% !TEX TS-program = LuaLaTeX
+\documentclass[serif,ngerman]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{lastpage}
+\usepackage{rotating}
+\usepackage{babel}
+\usepackage{tikz,textcomp}
+
+\usepackage{xcolor}
+\definecolor{chamois}{RGB}{255,255,240}
+\definecolor{darkbrown}{RGB}{124,79,0}
+\definecolor{UniBlue}{RGB}{83,101,130}
+
+\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+
+\usepackage{xkeyval}
+\usepackage{fontspec}
+ 
+\setmainfont{Frutiger Next Pro}
+
+\usepackage{graphicx}
+\usepackage{csquotes}
+ 
+\lstset{%
+float=hbp,%
+basicstyle=\ttfamily\small, %
+identifierstyle=\color{colIdentifier}, %
+keywordstyle=\color{darkbrown}, %
+stringstyle=\color{colString}, %
+commentstyle=\color{UniBlue}, %
+columns=flexible, %
+tabsize=2, %
+frame=single, %
+extendedchars=true, %
+showspaces=false, %
+showstringspaces=false, %
+numbers=left, %
+numberstyle=\tiny, %
+breaklines=true, %
+backgroundcolor=\color{hellgelb}, %
+breakautoindent=true, %
+captionpos=b%
+}
+
+\usepackage{progressbar}
+
+\progressbarchange{width=0.85\textwidth, heighta=0.1cm, filledcolor=
+brown, emptycolor=chamois, linecolor= chamois,borderwidth=1pt, tickswidth
+=1pt, roundnessr=0.1, subdivisions=20,tickscolor=brown}
+
+%\usepackage{bera}
+%\usepackage[default]{sourcecodepro}
+
+\usepackage{tikz}
+\newcommand{\topline}{%
+  \tikz[remember picture,overlay] {%
+    \draw[brown,ultra thick] ([yshift=-1cm]current page.north west)-- ([yshift=-1cm,xshift=\paperwidth]current page.north west);}}
+
+
+\addtobeamertemplate{frametitle}{}{\topline%
+}
+
+
+% http://tex.stackexchange.com/questions/7801/how-to-pass-in-a-ratio-in-fraction-form-as-opposed-to-decimal-form-to-table-co/7806#7806
+\makeatletter
+\newcommand\ratio[2]{%
+  \strip@pt\dimexpr#1pt/#2\relax
+}
+\makeatother
+
+%\setbeamertemplate{footline}{%
+%\hspace*{1cm}\progressbar{\ratio{\thepage}{\getpagerefnumber{LastPage}}}\hfill\textcolor{brown}{\footnotesize\thepage\ | \pageref{LastPage}}\hspace{1em}\vspace*{1em}}
+
+\setbeamertemplate{footline}{%
+\hspace*{1cm}\progressbar{\ratio{\thepage}{\getpagerefnumber{LastPage}}}\vspace*{3em}}
+
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{background canvas}{bg=chamois}
+\setbeamercolor{itemize item}{fg=brown}
+\setbeamertemplate{itemize item}{\maltese}
+\setbeamercolor{itemize subitem}{fg=brown}
+\setbeamertemplate{itemize subitem}{$\infty$}
+
+
+%\textasteriskcentered
+
+\setbeamercolor{title}{fg=UniBlue}
+\setbeamercolor{frametitle}{fg=UniBlue}
+\setbeamercolor{structure}{fg=UniBlue}
+
+\setbeamercolor{author}{fg=darkbrown}
+\setbeamercolor{date}{fg=darkbrown}
+
+\setbeamercolor{block title}{bg=darkbrown!40,fg=darkbrown!90}
+\setbeamercolor{block body}{bg=darkbrown!20,fg=UniBlue}
+\addtobeamertemplate{block begin}{%
+  \setlength{\textwidth}{0.8\textwidth}%
+}{}
+
+
+\setbeamercolor{block title alerted}{bg=yellow!60,fg=red}
+\setbeamercolor{block body alerted}{bg=hellgelb!80,fg=UniBlue}
+
+
+\author{Max Mustermann}
+\title{Titel der Präsentation}
+\subtitle{Untertitel der Präsentation}
+
+
+\begin{document}
+
+\frame{
+\maketitle
+}
+
+\frame{
+\frametitle{Inhalt}
+
+\tableofcontents
+
+}
+
+\section{Einleitung}
+
+\subsection{Mahatma Gandhi}
+
+\frame{
+\frametitle{\textsc{Mahatma Gandhi} \footnotesize{(2. Oktober 1869 in Porbandar, Gujarat)}}
+
+\begin{itemize}
+\item  indischer Rechtsanwalt \textbf{dasfsdfsd} \textbf{\textit{fsdfs}}
+\item  Widerstandskämpfer
+\item  Revolutionär
+\item Publizist und Morallehrer
+\item Asket und Pazifist
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+\end{itemize}
+}
+
+\frame{
+\frametitle{Titel der Folie 1}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+}
+
+\frame{
+\frametitle{Titel der Folie 2}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Titel der Folie 3}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Titel der Folie 4}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Titel der Folie 5}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Titel der Folie 6}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Titel der Folie 7}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Titel der Folie 8}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+}
+
+\frame{
+\frametitle{Titel der Folie 9}
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+}
+
+
+
+\end{document}
