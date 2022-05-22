@@ -1,0 +1,50 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage{xstring}
+\usepackage{xparse}
+\usepackage{expl3}
+
+% https://www.texdev.net/2010/05/23/from-newcommand-to-newdocumentcommand/
+\newcommand\NoArgs{Text to insert} % old
+\NewDocumentCommand\NoArgsA{}{Text to insert} % new
+
+\newcommand\OneArg[1]{Text using #1} %old
+\newcommand\TwoArgs[2]{Text using #1 and #2} %old
+
+\NewDocumentCommand\OneArgA{m}{Text using #1}
+\NewDocumentCommand\TwoArgsA{mm}{Text using #1 and #2}
+
+\newcommand\OneOptOfTwo[2][]{Text with #2 and perhaps #1} % old
+\newcommand\OneOptOfThree[3][]{Text with #2, #3 and perhaps #1} % old
+
+\NewDocumentCommand\OneOptOfTwoA{O{}m}%
+  {Text with #2 and perhaps #1}
+\NewDocumentCommand\OneOptOfThreeA{O{}mm}%
+{Text with #2, #3 and perhaps #1}
+
+\NewDocumentCommand\TwoOptOfThreeA{O{}O{}m}%
+  {Text with #3 and perhaps #1 and #2}
+
+
+\begin{document}
+
+\NoArgs
+
+\NoArgsA
+
+\jobname
+
+\OneArgA{Uwe}
+
+\TwoArgsA{Uwe}{Uwe}
+
+\OneOptOfTwo[12]{23423}
+
+\OneOptOfThree[ABC]{DEF}{GHI}
+
+\OneOptOfTwoA[abs]{DEF}
+\OneOptOfThreeA[3123]{fsfsdfs}{sdafsd}
+
+\TwoOptOfThreeA[a][b]{c}
+
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{listofitems}
+\usepackage{csquotes}
+\begin{document}
+
+\setsepchar{-}
+\readlist\mylist{\jobname}
+
+Individual items \mylist[1] und \mylist[2]
+
+Loop over list:
+\foreachitem\x\in\mylist[]{\ifnum\xcnt=1\else\ and \fi\enquote{\x}}
+
+\mylistlen
+
+\showitems*\mylist
+
+\end{document}
