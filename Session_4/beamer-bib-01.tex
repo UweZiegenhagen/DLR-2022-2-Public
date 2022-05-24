@@ -1,0 +1,50 @@
+\documentclass[12pt,ngerman]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{xcolor}
+
+\begin{document}
+
+\begin{frame}
+\frametitle{}
+
+\cite{Knuth}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{References}
+
+\begin{thebibliography}{9}
+\setbeamertemplate{bibliography item}[book]
+\bibitem{Knuth} Donald E. Knuth, The \TeX\ Book
+\bibitem{C} ItemC
+\bibitem{D} ItemD
+\setbeamertemplate{bibliography item}[article]
+\bibitem{E} ItemE
+\end{thebibliography}
+
+
+\end{frame}
+
+
+\end{document}
+
+
+\begin{thebibliography}{9}
+\setbeamertemplate{bibliography item}[online]
+\bibitem{A} ItemA
+\setbeamertemplate{bibliography item}[book]
+\bibitem{Knuth} Donald E. Knuth, The \TeX\ Book
+\setbeamertemplate{bibliography item}[article]
+\bibitem{C} ItemC
+\setbeamertemplate{bibliography item}[triangle]
+\bibitem{D} ItemD
+\setbeamertemplate{bibliography item}[text]
+\bibitem{E} ItemE
+\end{thebibliography}
