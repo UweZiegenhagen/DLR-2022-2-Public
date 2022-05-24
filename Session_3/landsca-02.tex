@@ -1,0 +1,38 @@
+%https://latex.org/forum/viewtopic.php?f=47&t=34589
+\documentclass[areasetadvanced]{scrartcl}
+
+\usepackage[automark, headsepline=true, footsepline=true]{scrlayer-scrpage}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{lipsum}
+\usepackage{hyperref}  % erst so spät wie möglich einbinden
+
+\areaset[current]{\textwidth}{\textheight}
+
+
+\begin{document}
+%\noindent\rule{\textwidth}{\textheight}
+
+\thispagestyle{empty}
+\section*{Kurzfassung}
+\lipsum[1-2]
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Einleitung}
+\lipsum[1-6]
+
+\storeareas\meinegespeichertenWerte% store the current typing area in \meinegespeichertenWerte
+\KOMAoption{paper}{a3, landscape}
+\areaset[current]{\dimexpr\textwidth+.5\paperwidth\relax}{\textheight}
+\lipsum[7-18]
+
+\clearpage
+\meinegespeichertenWerte%restore the typing area, that was valid at \storeareas\meinegespeichertenWerte
+\section{Weiterer Anhang}
+\lipsum[2-7]
+\end{document}

@@ -1,0 +1,28 @@
+%!TEX TS-program = Arara
+% arara: pdflatex: {shell: yes}
+\documentclass[12pt,ngerman]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{xcolor}
+\usepackage{blindtext}
+
+
+\usepackage[style=authortitle-icomp,backend=biber]{biblatex}
+\usepackage[babel,german=quotes]{csquotes}
+
+\addbibresource{Literaturverzeichnis.bib}
+
+\begin{document}
+
+\blindtext 
+
+\cite{Knuth:1984}
+
+\printbibliography
+
+\end{document}

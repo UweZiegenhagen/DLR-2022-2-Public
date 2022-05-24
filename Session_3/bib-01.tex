@@ -1,0 +1,25 @@
+%!TEX TS-program = Arara
+% arara: pdflatex: {shell: yes}
+\documentclass[12pt,ngerman]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{paralist}
+\usepackage{xcolor}
+\usepackage{blindtext}
+
+\begin{document}
+
+\blindtext \cite{knuth}
+
+
+\begin{thebibliography}{9}
+\bibitem{knuth} Donald E. Knuth, \textit{The \TeX\ Book}, Addison-Wesley, 2nd edition, 1984
+\end{thebibliography}
+
+
+\end{document}

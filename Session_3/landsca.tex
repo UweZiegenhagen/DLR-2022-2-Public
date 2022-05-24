@@ -1,0 +1,25 @@
+% https://golatex.de/viewtopic.php?t=12984
+\documentclass[a4paper, oneside]{scrartcl}
+
+\usepackage[headsepline]{scrlayer-scrpage}
+\clearscrheadings
+\ohead{\pagemark}
+\ihead{Autor}
+\pagestyle{scrheadings}
+
+\usepackage{blindtext}
+
+\begin{document}
+\blindtext \the\linewidth
+
+\newpage
+\KOMAoptions{paper=landscape,pagesize}
+\recalctypearea
+\the\linewidth
+\blindtext
+
+\newpage
+\KOMAoptions{paper=portrait,pagesize}
+\recalctypearea
+\blindtext
+\end{document}
