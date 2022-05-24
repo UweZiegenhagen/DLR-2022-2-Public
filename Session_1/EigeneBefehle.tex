@@ -14,11 +14,14 @@
 
 \graphicspath{{./bilder/}}
 
+\newcommand{\bild}{%
+\textcolor{lime}{\rule{8cm}{6cm}}}
+
+\newcommand{\latexbefehl}[1]{\texttt{\textbackslash #1}}
+
 \newcommand{\person}[1]{\textcolor{red}{\textsc{\bfseries #1}}}
 
 \renewcommand{\person}[1]{\textcolor{blue}{\textsc{\bfseries #1}}}
-
-\newcommand{\bild}{\textcolor{lime}{\rule{8cm}{6cm}}}
 
 \newcommand{\image}[2]{%
 \begin{figure}
@@ -50,12 +53,15 @@
 \caption{Ein einfaches Bild}
 \end{figure}
 
-
-\image{Katze}{Melli}
+\image{./bilder/Katze}{Melli 2}
 
 \pageref{fig:Katze}
 
+\latexbefehl{textbf\{\}}
 
 \imagew[0.5]{Katze}{Melli}
+
+\imagew{Katze}{Melli}
+
 
 \end{document}
