@@ -1,6 +1,9 @@
 %!TEX TS-program = Arara
 % arara: pdflatex: {shell: yes}
-\documentclass[12pt,ngerman]{scrartcl}
+% arara: biber
+% arara: pdflatex: {shell: yes}
+
+\documentclass[12pt,ngerman,parskip=half]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -10,7 +13,6 @@
 \usepackage{paralist}
 \usepackage{xcolor}
 \usepackage{blindtext}
-
 
 \usepackage[style=authortitle-icomp,backend=biber]{biblatex}
 \usepackage[babel,german=quotes]{csquotes}
@@ -22,6 +24,19 @@
 \blindtext 
 
 \cite{Knuth:1984}
+
+\blindtext 
+ 
+\cite{ziegenhagen:2017}
+
+\parencite{Knuth:1984}
+
+\parencite{ziegenhagen:2017}
+
+\blindtext\footcite{Knuth:1984}
+
+\citeauthor{ziegenhagen:2017} hat in seinem im Jahr \citeyear{ziegenhagen:2017} erschienenen Artikel \citetitle{ziegenhagen:2017} die Einrichtung eines \TeX-Servers beschrieben.
+  
 
 \printbibliography
 
