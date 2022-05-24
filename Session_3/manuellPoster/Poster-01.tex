@@ -1,4 +1,4 @@
-\documentclass[16pt,latin,draft]{scrartcl}
+\documentclass[16pt,latin]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[paperheight=215cm,paperwidth=85cm, left=10mm,right=10mm,top=1mm,bottom=10cm]{geometry}
@@ -8,8 +8,8 @@
 \usepackage{xcolor}
 \usepackage{blindtext}
 \usepackage{tikz}
-\usepackage[]{mdframed}
-\usepackage[]{eso-pic}
+\usepackage{mdframed}
+\usepackage{eso-pic}
  
 \setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
@@ -26,60 +26,67 @@
  
 {\textcolor{gray}{\blindtext[130]}}
  
-\AddToShipoutPictureFG{
+ \AddToShipoutPictureFG{
   \put(50,5850){
 {\scalebox{5}{\bfseries\huge Professioneller Textsatz mit }}
 }}
- 
- 
+
 \AddToShipoutPictureFG{
-  \put(1400,5450){
-{\scalebox{10}{\bfseries\huge \LaTeX }}
+  \put(1000,5150){
+{\scalebox{30}{\bfseries \LaTeX }}
 }}
- 
+
 \AddToShipoutPictureFG{
-  \put(100,4700){
-\colorbox{gray}{\includegraphics[width=0.5\textwidth]{pg_0003.pdf}}
+  \put(100,4000){
+{\includegraphics[width=0.5\textwidth,angle=10]{./Bilder/Katze1.jpg}}
 }}
+
+\end{document}
+
+
+
+ 
+ 
+
+ 
+
  
 \AddToShipoutPictureFG{
   \put(1100,4050){
-\colorbox{gray}{\includegraphics[width=0.5\textwidth]{pg_0004.pdf}}
+\colorbox{gray}{\includegraphics[width=0.5\textwidth]{./Bilder/Katze1.jpg}}
 }}
  
 \AddToShipoutPictureFG{
   \put(100,3450){
-\colorbox{gray}{\includegraphics[width=0.5\textwidth]{pg_0009.pdf}}
+\colorbox{gray}{\includegraphics[width=0.5\textwidth]{./Bilder/Katze1.jpg}}
 }}
  
 \AddToShipoutPictureFG{
   \put(1100,3000){
-\colorbox{gray}{\includegraphics[width=0.5\textwidth]{pg_0076.pdf}}
+\colorbox{gray}{\includegraphics[width=0.5\textwidth]{./Bilder/Katze1.jpg}}
 }}
  
  
  
 \AddToShipoutPictureFG{
   \put(100,2290){
-\colorbox{gray}{\includegraphics[width=0.5\textwidth]{pg_0066.pdf}}
+\colorbox{gray}{\includegraphics[width=0.5\textwidth]{./Bilder/Katze1.jpg}}
 }}
  
  
 \AddToShipoutPictureFG{
   \put(1100,1950){
-\colorbox{gray}{\includegraphics[width=0.5\textwidth]{pg_0068.pdf}}
+\colorbox{gray}{\includegraphics[width=0.5\textwidth]{./Bilder/Katze1.jpg}}
 }}
  
  
 \AddToShipoutPictureFG{
   \put(100,1100){
-\colorbox{gray}{\includegraphics[width=0.5\textwidth]{pg_0065.pdf}}
+\colorbox{gray}{\includegraphics[width=0.5\textwidth]{./Bilder/Katze1.jpg}}
 }}
  
  
 \AddToShipoutPictureFG{
   \put(1100,750){
-\colorbox{gray}{\includegraphics[width=0.5\textwidth]{pg_0075.pdf}}
+\colorbox{gray}{\includegraphics[width=0.5\textwidth]{./Bilder/Katze1.jpg}}
 }}
- 
-\end{document}
