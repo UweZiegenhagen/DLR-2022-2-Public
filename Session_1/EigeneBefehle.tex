@@ -14,6 +14,12 @@
 
 \graphicspath{{./bilder/}}
 
+\newcommand{\test}[4][1.0]%
+{%
+{#1 ; #2 ; #3 ; #4}
+}
+
+
 \newcommand{\bild}{%
 \textcolor{lime}{\rule{8cm}{6cm}}}
 
@@ -63,5 +69,12 @@
 
 \imagew{Katze}{Melli}
 
+\test[optional]{b}{c}{d}
+
+%\test{b}{c} Hallo
+
+\texttt{Hallo}
+
+\texttt {Hal}lo 
 
 \end{document}
