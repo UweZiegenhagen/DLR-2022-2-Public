@@ -1,0 +1,61 @@
+% https://tex.stackexchange.com/questions/644612/ab-whole-cubed-in-latex
+\documentclass {beamer}
+\usepackage    {tikz}
+\usetikzlibrary{3d}          % for 'canvas is...' options
+\usetikzlibrary{perspective} % for '3d view' option
+
+\setbeamertemplate{navigation symbols}{}
+
+\tikzset
+{
+  linea/.style={draw=red},
+  lineb/.style={draw=blue},
+}
+
+\newcommand{\simplecube}[7]% origin, dimension x, dimension y, dimension z, style x, style y, style z
+{
+  \begin{scope}[shift={#1}]
+    \fill[white  ,canvas is xy plane at z=#4] (0,0) rectangle (#2,#3);
+    \fill[gray!40,canvas is yz plane at x=#2] (0,0) rectangle (#3,#4);
+    \fill[gray!10,canvas is xz plane at y=#3] (0,0) rectangle (#2,#4);
+    \foreach\i/\j in {0/1, 1/1, 1/0}
+    {
+      \draw[line#5] (0,#3*\i,#4*\j) --++ (#2,0,0);
+      \draw[line#6] (#2*\i,0,#4*\j) --++ (0,#3,0);
+      \draw[line#7] (#2*\i,#3*\j,0) --++ (0,0,#4);
+    }
+  \end{scope}
+}
+
+\newcommand{\cubeab}[4]% origin, a, b, separation
+{
+  \begin{scope}[shift={#1}]
+    \simplecube{(0    ,0    ,0    )}{#2}{#2}{#2}{a}{a}{a}
+    \simplecube{(#2+#4,0    ,0    )}{#3}{#2}{#2}{b}{a}{a}
+    \simplecube{(0    ,#2+#4,0    )}{#2}{#3}{#2}{a}{b}{a}
+    \simplecube{(#2+#4,#2+#4,0    )}{#3}{#3}{#2}{b}{b}{a}
+    \simplecube{(0    ,0    ,#2+#4)}{#2}{#2}{#3}{a}{a}{b}
+    \simplecube{(#2+#4,0    ,#2+#4)}{#3}{#2}{#3}{b}{a}{b}
+    \simplecube{(0    ,#2+#4,#2+#4)}{#2}{#3}{#3}{a}{b}{b}
+    \simplecube{(#2+#4,#2+#4,#2+#4)}{#3}{#3}{#3}{b}{b}{b}
+  \end{scope}
+}
+
+\begin{document}
+\begin{frame}
+\begin{figure}\centering
+\begin{tikzpicture}[3d view={115}{30},scale=0.75,line cap=round,line join=round]
+\def\a{3.2}
+\def\b{1.2}
+\foreach\i in {1,...,29}
+{
+  \pgfmathsetmacro\j{15-int(abs(15-\i))}
+  \only<\i>
+  {
+    \cubeab{(0,0,0)}{\a}{\b}{0.2*\j-0.2}
+  }
+}
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+\end{document}
