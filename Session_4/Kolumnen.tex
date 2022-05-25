@@ -1,0 +1,25 @@
+\documentclass[a4paper,12pt,BCOR=1cm]{scrbook}
+
+\usepackage[headsepline=0.5pt,footsepline=0.5pt]{scrlayer-scrpage}
+
+\KOMAoptions{headwidth=1.1\textwidth,footwidth=1.1\textwidth}
+\usepackage{blindtext}
+ 
+\usepackage{microtype}
+ 
+\pagestyle{scrheadings}
+ 
+\ohead[]{\headmark}
+\ofoot[\pagemark]{\pagemark}
+\ifoot[]{} % inner foot
+\ihead[]{} % inner head
+\cfoot[]{} % center foot
+\chead[]{} % center head
+ 
+\begin{document}
+\chapter{Hello}
+\section{World}
+ 
+\blindtext[10]
+ 
+\end{document}
