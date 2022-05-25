@@ -2,11 +2,15 @@
 
 \documentclass[12pt,ngerman,parkskip=half]{scrartcl}
 
-\newcommand*{\myfont}[1]{\fontfamily{#1}\selectfont Franz jagt im komplett verwahrlosten Taxi quer durch Bayern}
+\newcommand*{\myfont}[1]{{\fontfamily{#1}\selectfont Franz jagt im komplett verwahrlosten Taxi quer durch Bayern}}
+
+\usepackage[]{blindtext}
 
 \begin{document}
 
 \myfont{pag}
+
+\blindtext
 
 \myfont{fvs}
 
