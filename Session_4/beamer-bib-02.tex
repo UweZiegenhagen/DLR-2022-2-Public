@@ -1,0 +1,51 @@
+%!TEX TS-program = Arara
+% arara: pdflatex: {shell: yes}
+% arara: biber
+% arara: pdflatex: {shell: yes}
+\documentclass[12pt,ngerman]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\usepackage[style=numeric,backend=biber]{biblatex}
+\usepackage[babel,german=quotes]{csquotes}
+
+\addbibresource{Literaturverzeichnis.bib}
+
+\begin{document}
+
+\begin{frame}
+\frametitle{}
+
+\cite{Knuth:1984}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{References}
+
+\printbibliography
+
+
+\end{frame}
+
+
+\end{document}
+
+
+\begin{thebibliography}{9}
+\setbeamertemplate{bibliography item}[online]
+\bibitem{A} ItemA
+\setbeamertemplate{bibliography item}[book]
+\bibitem{Knuth} Donald E. Knuth, The \TeX\ Book
+\setbeamertemplate{bibliography item}[article]
+\bibitem{C} ItemC
+\setbeamertemplate{bibliography item}[triangle]
+\bibitem{D} ItemD
+\setbeamertemplate{bibliography item}[text]
+\bibitem{E} ItemE
+\end{thebibliography}
