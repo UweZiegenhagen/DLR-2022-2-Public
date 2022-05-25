@@ -2,6 +2,11 @@
 % arara: pdflatex: {shell: yes}
 \documentclass[helvetica,11pt,ngerman]{europecv}
 
+\usepackage{ifthen}
+
+\newboolean{papers}
+\setboolean{papers}{false} 
+
 \usepackage{graphicx,csquotes}
 \usepackage{eso-pic}
 \ecvLeftColumnWidth{5.7cm}
@@ -28,7 +33,12 @@
 \ecvitem*{Corporate Title}{Handlungsbevollmächtigter}
 \ecvitem*{Main activities and responsibilities}{Business Analyst \enquote{Credit \& Treasury Operations}}
 
-
+\ifthenelse{\boolean{papers}}{
+\ecvsection{Wiss. Veröffentlichungen}
+\ecvitem{2014}{\LaTeX\ im Firmeneinsatz}
+}{}
 \end{europecv}
 
 \end{document}
+
+
