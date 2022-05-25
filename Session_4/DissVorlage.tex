@@ -1,0 +1,48 @@
+\documentclass[german]{dlrib}
+
+\renewcommand{\headfont}{}
+
+\usepackage[headsepline=0.5pt,footsepline=0.5pt]{scrlayer-scrpage}
+
+\KOMAoptions{headwidth=1\textwidth,footwidth=1\textwidth}
+\usepackage{blindtext}
+\usepackage{microtype}
+ 
+\title[dasdas]{Notes}
+\subtitle{Lorem ipsum dorem Explanatory subtitles}
+\author{Donald Duck} 
+
+\date{\today}
+\version{1.2}
+
+\pagestyle{scrheadings}
+ 
+\ohead[a]{\color[gray]{0.5}\includegraphics[width=12mm]{\DLRAdler}}
+\ofoot[Seite: \pagemark]{Seite: \pagemark}
+\ifoot[a]{\color[gray]{0.5} Titel: Notes \\ Version 1.2} % inner foot
+\ihead[a]{\headmark} % inner head
+\cfoot[]{} % center foot
+\chead[]{} % center head
+ 
+ 
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\chapter{Einleitung}
+
+\section{Literaturüberblick}
+
+
+\end{document}
