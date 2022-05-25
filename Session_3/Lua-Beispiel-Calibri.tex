@@ -1,0 +1,23 @@
+%!TEX TS-program = LuaLaTeX
+\documentclass[12pt,ngerman]{scrartcl}
+
+\usepackage{babel}
+
+\usepackage{unicode-math}
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\setmathfont{Cambria Math}
+
+\usepackage{blindtext}
+
+\begin{document}
+
+\blindtext
+
+\textit{\blindtext}
+
+\textbf{\textit{\blindtext}}
+
+\( -\frac{p}{2} \pm \sqrt{ \left(\frac{p}{2}\right)^2 -q} \)
+
+\end{document}
