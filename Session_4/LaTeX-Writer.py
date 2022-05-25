@@ -9,3 +9,4 @@ with open('python-0123.tex','w') as file:
     
 
 os.system('pdflatex -interaction=batchmode python-0123.tex')
+os.system('pdflatex -interaction=batchmode python-0123.tex')
