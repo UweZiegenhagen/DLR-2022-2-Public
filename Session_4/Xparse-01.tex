@@ -1,0 +1,98 @@
+\documentclass[12pt,ngerman,parskip=half]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{paralist}
+\usepackage{xcolor}
+
+\usepackage{xparse}
+
+%https://www.texdev.net/2010/05/23/from-newcommand-to-newdocumentcommand/
+\newcommand\NoArgsO{Text to insert 1}
+\NewDocumentCommand\NoArgsN{}{Text to insert 2}
+
+\newcommand\OneArgO[1]{Text using #1}
+\NewDocumentCommand\OneArgN{m}{Text using #1}
+
+\newcommand\TwoArgsO[2]{Text using #1 and #2}
+\NewDocumentCommand\TwoArgsN{mm}{Text using #1 and #2}
+
+
+\newcommand\OneOptOfTwoO[2][]{Text with #2 and perhaps #1}
+\newcommand\OneOptOfThreeO[3][]{Text with #2, #3 and perhaps #1}
+
+
+\NewDocumentCommand\OneOptOfTwoN{O{}m}%
+  {Text with #2 and perhaps #1}
+\NewDocumentCommand\OneOptOfThreeN{O{}mm}%
+{Text with #2, #3 and perhaps #1}
+
+% nur New
+\NewDocumentCommand\TwoOptOfThreeN{O{}O{}m}%
+  {Text with #3 and perhaps #1 and #2}
+
+\newcommand\OneOptWithDefaultO[2][default]%
+  {Text using #1 (could be the default) and #2}
+\NewDocumentCommand\OneOptWithDefaultN{O{default}m}%
+  {Text using #1 (could be the default) and #2}
+
+% Check for optionals
+\NewDocumentCommand\OneOptOfTwoWithTestN{om}{%
+  \IfNoValueTF{#1}
+    {Do stuff with #2 only}
+    {Do stuff with #1 and #2}%
+}
+
+\NewDocumentCommand\TwoTypesOfOptN{D<>{}O{}m}%
+  {Text using #1, #2 and #3}
+
+\NewDocumentCommand\StarThenArgN{sm}{%
+  \IfBooleanTF#1
+    {Use #2 with a star}
+    {Use #2 without a star}%
+}
+
+\begin{document}
+
+\NoArgsO
+
+\NoArgsN
+
+\OneArgO{Hello World}
+
+\OneArgN{Hello World}
+
+\OneOptOfTwoO[Hallo]{Foo}
+
+\OneOptOfThreeO[Hallo]{Foo}{Bar}
+
+
+\OneOptOfTwoN[Hallo]{Foo}
+
+\OneOptOfThreeN[Hallo]{Foo}{Bar}
+
+\TwoOptOfThreeN[a][b]{c}
+
+\OneOptWithDefaultO{b}, \OneOptWithDefaultO[b]{b}
+
+\OneOptWithDefaultN{b}, \OneOptWithDefaultN[c]{d}
+
+
+\OneOptOfTwoWithTestN{b}, \OneOptOfTwoWithTestN[a]{b}
+
+
+
+\TwoTypesOfOptN{text}             % One mandatory
+\TwoTypesOfOptN[text]{text}       % A normal optional
+\TwoTypesOfOptN<text>{text}       % A special optional
+\TwoTypesOfOptN<text>[text]{text} % Both optionals
+
+\StarThenArgN{Hello}, \StarThenArgN*{Hello}
+
+
+
+\end{document}
