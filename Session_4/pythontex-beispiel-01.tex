@@ -8,6 +8,7 @@
 \usepackage[]{booktabs}
 \usepackage[]{amsmath}
 \usepackage[]{graphicx}
+\usepackage[light,math]{iwona}
 \begin{document}
 
 Hallo
@@ -41,7 +42,7 @@ clf()
 figure(figsize=(5, 3))
 rc("text", usetex=True)
 plot(t, y)
-title(r'Ged\"ampfter exponentieller Zerfall') 
+title(r'Ged\"ampfter exponentieller Zerfall $a+b=c$') 
 text(6, 0.15, r"$y = \cos(2 \pi t) e^{-t}$")
 xlabel("Zeit (t)")
 ylabel("Spannung (mV)")
